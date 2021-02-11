@@ -73,19 +73,17 @@ class ViewController: UIViewController {
       self.heading.center.x += self.view.bounds.width
     }
 
-    UIView.animate(withDuration: 0.5, delay: 0.3, options: [.curveEaseInOut],
-      animations: {
-        self.username.center.x += self.view.bounds.width
-      },
-      completion: nil
-    )
+    UIView.animate(withDuration: 1.0, delay: 0.5,
+    usingSpringWithDamping: 0.5, initialSpringVelocity: 0.0,
+    options: [], animations: {
+      self.username.center.x += self.view.bounds.width
+    }, completion: nil)
 
-    UIView.animate(withDuration: 0.5, delay: 0.4, options: [.curveEaseInOut],
-      animations: {
-        self.password.center.x += self.view.bounds.width
-      },
-      completion: nil
-    )
+    UIView.animate(withDuration: 1.0, delay: 0.7,
+    usingSpringWithDamping: 0.5, initialSpringVelocity: 0.0,
+    options: [], animations: {
+      self.password.center.x += self.view.bounds.width
+    }, completion: nil)
 
     UIView.animate(withDuration: 1.5) {
       self.cloud1.alpha = 1
